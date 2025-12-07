@@ -1,0 +1,63 @@
+# MTM-CMOS Analysis — Results & Observations
+
+This document summarizes the **experimental findings, simulation outcomes, and key observations** obtained during the analysis of the MTM-CMOS inverter. It includes all major results from **DC analysis, transient analysis, leakage evaluation, width-variation study, body-bias behavior**, and overall performance comparison.
+
+---
+
+## 📌 1. Overview of Result Analysis
+
+The MTM-CMOS inverter was analyzed across:
+
+* **Active Mode**
+* **Sleep Mode** (power-gated)
+* **Width and threshold variations**
+* **Body-bias voltage sweep**
+* **Transient switching behavior**
+
+The primary goal was to **reduce leakage power** while maintaining acceptable switching performance.
+
+---
+
+## 🔍 2. DC Analysis Results
+
+### **2.1 CMOS Inverter Leakage (Without MTCMOS)**
+
+* Leakage in OFF state: **~1.57 nA**
+* Shows typical low static power for CMOS, but not sufficient for deep-submicron applications.
+
+### **2.2 MTCMOS Inverter – Active Mode**
+
+* Measured leakage: **25 nA**
+* Higher than ideal inverter due to the use of **LVT logic transistors** for speed.
+
+### **2.3 MTCMOS Inverter – Sleep Mode**
+
+* Leakage reduces to **250 pA**
+* Achieves **~100× leakage reduction**
+* Confirms successful isolation through HVT sleep transistors
+
+### **2.4 Key DC Observation**
+
+* Sharp transition characteristics maintained in Active Mode
+* Leakage dominated behavior seen in Sleep Mode
+
+> **Conclusion:** MTCMOS is highly effective for standby leakage suppression while maintaining active performance.
+
+---
+
+## ⚡ 3. Transient Analysis Results
+
+### **3.1 CMOS Inverter Timing**
+
+* Rise Time: **26.03 ps**
+* Fall Time: **24.66 ps**
+* Propagation Delay: **25.345 ps**
+
+### **3.2 MTCMOS Inverter Timing**
+
+* Propagation delay (base width): **36.5 ps**
+* After width optimization: **Improved to 24.78 ps**
+* Rise Time range: **35.33 – 57.1 ps**
+* Fall Time range: **27 – 60 ps**
+
+### **3.3 Observed Switching Beh
